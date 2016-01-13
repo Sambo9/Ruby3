@@ -16,8 +16,8 @@ class Parrot
   end
 end
 
-p = Parrot.new
-p.say_
-p.say_hello
-p.say_toto_le_gros_chat
-p.xdrcfgvhbjn
+# p = Parrot.new
+# p.say_
+# p.say_hello
+# p.say_toto_le_gros_chat
+# p.xdrcfgvhbjn
