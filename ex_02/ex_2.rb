@@ -1,6 +1,5 @@
 #!/usr/bin ruby
 
-load 'ex_5.rb'
                           # ====================================
                           # ========= Class Calculator =========
                           # ====================================
@@ -8,8 +7,26 @@ load 'ex_5.rb'
 class Calculator
   # ========= Methods =========
   def self.calculate(str)
-    send(str)
-  end
+      op = str.split(" ")
+      unless op.length > 3
+          case op[1]
+          when "+"
+              op[0].to_i.send( "+", op[2].to_i)
+          when "-"
+              op[0].to_i.send( '-', op[2].to_i)
+          when "*"
+              op[0].to_i.send( '*', op[2].to_i)
+          when "/"
+              op[0].to_i.send('/', op[2].to_i)
+          when "%"
+              op[0].to_i.send( '%', op[2].to_i)
+          else
+              print "Not a valid input"
+          end
+      else
+          print "Not a valid input"
+      end
+    end
 end
 
 # while ((input = gets.chomp) != "quit") do
